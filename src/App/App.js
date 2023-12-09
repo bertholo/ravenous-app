@@ -1,6 +1,5 @@
-
 import './App.css';
-import { BusinessList , SearchBar } from './components/components.js';
+import { BusinessList , SearchBar } from '../components/components';
 
 function App() {
   return (

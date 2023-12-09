@@ -1,5 +1,7 @@
 import React from "react";
 import foodVideo from '../media/foodVideo.mp4';
+import './components.css';
+
 //Represents how a business in Ravenous will be formated and styled.
 function Business(){
     const business = {
@@ -85,7 +87,7 @@ function SearchBar() {
         </div>
         <form id="searchBar" action="#" method="GET">
             <div className="input">
-            <input type="text" name="terms" placeholder ="Enter a restaurant"/>
+            <input type="text" name="terms" placeholder="Enter a restaurant"/>
             <input type="text" name="location" placeholder="Enter a location"/>
             </div>
             <button id="btn" >Let's Go!</button>
