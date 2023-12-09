@@ -11,15 +11,6 @@
   
 }
 
-#searchBar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  padding-top: 5%;
-}
-
 #ravenous {
   width: 100%;
   height: 5rem;
@@ -60,23 +51,4 @@ video {
   width: 100%;
   object-fit: cover;
   z-index: -1;
-}
-
-#btn {
-  height: 2rem;
-  width: 10rem;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  border-radius: 10px;
-  border: 2px solid grey;
-  background-color: rgb(170, 148, 23);
-  color: aliceblue;
-}
-
-ul {
-  display: flex;
-  direction: row;
-  justify-content: flex-start;
-  list-style-type: none;
-  margin-top: 5%;
 }

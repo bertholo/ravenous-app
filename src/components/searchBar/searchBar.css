@@ -1,0 +1,19 @@
+#searchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding-top: 5%;
+  }
+
+  #btn {
+    height: 2rem;
+    width: 10rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: 2px solid grey;
+    background-color: rgb(170, 148, 23);
+    color: aliceblue;
+  }
