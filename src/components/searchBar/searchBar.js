@@ -1,28 +1,34 @@
 import React from 'react';
 import foodVideo from '../media/foodVideo.mp4';
-import './searchBar.css';
+import styles from './SearchBar.module.css';
 
 //SearchBar component search for businesses on the yelp platform
 
+const sortByOptions = {
+    "Best Match": "best_match",
+    "Highest Rated": "rating",
+    "Most Reviewed": "review_count",
+  };
+
 function SearchBar() {
+
+    const renderSortByOptions = () => {
+        return Object.keys(sortByOptions).map((option) => {
+            let sortByOptionValue = option[sortByOptions];
+            return <li key={sortByOptionValue}>{option}</li>
+        })
+    }
+
     return (
-    <div className="header">
-        <h1 id="ravenous">RAVENOUS</h1>
-        <div id="anchor">
-        <a href="" >Best<br />
-        match</a>
-        <a href="" >Highest<br />
-        rated</a>
-        <a href="" >Most<br />
-        reviwed</a>
+    <div className={styles.SearchBar}>
+        <div className={styles.SearchBarSortOptions}>
+            <ul>{renderSortByOptions()}</ul>
         </div>
-        <form id="searchBar" action="#" method="GET">
-            <div className="input">
-            <input type="text" name="terms" placeholder="Enter a restaurant"/>
-            <input type="text" name="location" placeholder="Enter a location"/>
-            </div>
-            <button id="btn" >Let's Go!</button>
-        </form>
+        <div className={styles.SearchBarFields}>
+            <input placeholder="Enter a restaurant"/>
+            <input placeholder="Enter a location"/>
+        </div>
+            <button className={styles.SearchBarSubmit} >Let's Go!</button>
         <video src={foodVideo} autoPlay loop muted />
     </div>
     )

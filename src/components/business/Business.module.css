@@ -1,0 +1,76 @@
+.Business{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16.66rem;
+    height: auto;
+    margin: 0 0.5rem 2.3rem 0.5rem;
+    background-color: rgb(236, 233, 223);
+    border: 2px solid black;
+  
+  }
+
+  .BusinessImage {
+    height: 16.66rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .BusinessImage img {
+    width: 100%;
+  }
+
+  .Business h2 {
+    margin-top: 0;
+    font-weight: 600;
+  }
+  
+  .BusinessInformation {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .BusinessInformation p {
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1rem;
+    margin: 0;
+  }
+
+  .BusinessReviews h3 {
+    margin: 0;
+  }
+  
+  .BusinessAddress{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .BusinessReviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0;
+    text-align: right;
+  
+  }
+
+  .BusinessReviews h3 {
+    color: #cca353;
+    font-weight: 600;
+  }
+
+  .BusinessReviews .rating {
+    font-size: 0.88rem;
+    line-height: 1rem;
+  }
+  

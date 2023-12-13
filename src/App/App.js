@@ -1,9 +1,9 @@
-import './App.css';
-import  BusinessList from '../components/businessList/businessList'
-import SearchBar from '../components/searchBar/searchBar';
+import styles from './App.module.css';
+import  BusinessList from '../components/BusinessList/BusinessList'
+import SearchBar from '../components/SearchBar/SearchBar';
 
 
-function App() {
+const App = () => {
 
   const businessesList = [{
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
@@ -39,8 +39,11 @@ function App() {
 
   return (
     <>
+      <div className={styles.App}>
+      <h1>RAVENOUS</h1>
       <SearchBar />
       <BusinessList businessesList={businessesList} />
+      </div>
     </>
   )
 }

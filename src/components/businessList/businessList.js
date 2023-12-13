@@ -1,16 +1,16 @@
 import React from 'react';
-import Business from '../business/business'
-import './businessList.css';
+import Business from '../Business/Business'
+import styles from './BusinessList.module.css';
 
 
 //Displays a list of businesses using the business component.
 function BusinessList({businessesList}) {
     return (
-        <ul>
+        <div className={styles.BusinessList}>
             {businessesList.map((business, index) => (
                 <Business key={index} business={business} />
             ))}
-        </ul>
+        </div>
     );
 }
 
