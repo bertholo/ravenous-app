@@ -13,19 +13,17 @@
     list-style: none;
   }
   
-  .SearchBarSortOptions li{
+  .SearchBarSortOptions li {
     color: aliceblue;
+    border-bottom: aliceblue solid 1px;
     text-decoration: none;
     padding-left: 3%;
-    
+    cursor: pointer;
   }
 
-  .SearchBarSortOptions li:hover {
-    color: #d4cfcf;
-  }
-
-  .SearchBarSortOptions li.active,
-.SearchBarSortOptions li.active:hover {
+  .SearchBarSortOptions li:active, 
+  .SearchBarSortOptions li:hover, 
+  .SearchBarSortOptions li:focus {
   border-bottom: 1px solid #f0c36c;
   color: #f0c36c;
 }
@@ -38,14 +36,28 @@
   }
 
   .SearchBarSubmit {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     height: 2rem;
     width: 10rem;
-    margin-bottom: 3rem;
     margin-top: 1rem;
     border-radius: 10px;
     border: 2px solid grey;
     background-color: rgb(170, 148, 23);
+    font-weight: bold;
+    text-decoration: none;
     color: aliceblue;
+  }
+
+  .SearchBarSubmit:hover {
+    color: rgb(236, 233, 223);;
+    background-color: #7a5a1a;
+  }
+
+  .SearchBarSubmit:active {
+    background-color:rgb(236, 233, 223);
+    color: #7a5a1a
   }
   
   video {
