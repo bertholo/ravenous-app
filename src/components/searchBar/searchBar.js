@@ -12,16 +12,16 @@ const sortByOptions = {
 
 function SearchBar() {
 
-    const [searchTerm, setSearchTerm] = useState('');
-    const [searchLocation, setSearchLocation] = useState('');
+    const [term, setTerm] = useState('');
+    const [location, setLocation] = useState('');
     const [sortBy, setSortBy] = useState('best_match');
 
-    const handleSearchTerm = (event) => {
-        setSearchTerm(event.target.value);
+    const handleTerm = (event) => {
+        setTerm(event.target.value);
     }
 
-    const handleSearchLocation = (event) => {
-        setSearchLocation(event.target.value);
+    const handleLocation = (event) => {
+        setLocation(event.target.value);
     }
 
     const handleSortBy = (sortByOption) => {
@@ -31,10 +31,9 @@ function SearchBar() {
     const handleSubmitButton = (event) => {
         event.preventDefault();
         
-        console.log(`searching Yelp with ${searchTerm}, ${searchLocation}, ${sortBy}`)
+        console.log(`searching Yelp with ${term}, ${location}, ${sortBy}`);
+        
     }
-    
-
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map((option) => {
             let sortByOptionValue = sortByOptions[option];
@@ -51,8 +50,8 @@ function SearchBar() {
             <ul>{renderSortByOptions()}</ul>
         </div>
         <div className={styles.SearchBarFields}>
-            <input value={searchTerm} onChange={handleSearchTerm} placeholder="Enter a restaurant"/>
-            <input value={searchLocation} onChange={handleSearchLocation} placeholder="Enter a location"/>
+            <input value={term} onChange={handleTerm} placeholder="Enter a restaurant"/>
+            <input value={location} onChange={handleLocation} placeholder="Enter a location"/>
         </div>
         <button className={styles.SearchBarSubmit} onClick={handleSubmitButton}>Let's Go!</button>
         <video src={foodVideo} autoPlay loop muted />

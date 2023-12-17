@@ -43,6 +43,7 @@ const App = () => {
       <h1>RAVENOUS</h1>
       <SearchBar />
       <BusinessList businessesList={businessesList} />
+      console.log(search());
       </div>
     </>
   )
