@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Business.module.css';
-import search from '../../utils/yelpRequests';
+
 
 //Represents how a business in Ravenous will be formated and styled.
 function Business({business}){

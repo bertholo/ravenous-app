@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import foodVideo from '../media/foodVideo.mp4';
 import styles from './SearchBar.module.css';
-import search from '../../utils/yelpRequests';
 
 //SearchBar component search for businesses on the yelp platform
 
