@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import foodVideo from '../media/foodVideo.mp4';
 import styles from './SearchBar.module.css';
+import search from '../../utils/yelpRequests';
 
 //SearchBar component search for businesses on the yelp platform
 
@@ -10,7 +11,7 @@ const sortByOptions = {
     "Most Reviewed": "review_count",
   };
 
-function SearchBar() {
+function SearchBar({searchYelp}) {
 
     const [term, setTerm] = useState('');
     const [location, setLocation] = useState('');
@@ -32,8 +33,9 @@ function SearchBar() {
         event.preventDefault();
         
         console.log(`searching Yelp with ${term}, ${location}, ${sortBy}`);
-        
+          searchYelp(term, location, sortBy);
     }
+
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map((option) => {
             let sortByOptionValue = sortByOptions[option];

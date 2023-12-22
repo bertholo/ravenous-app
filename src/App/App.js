@@ -1,49 +1,31 @@
+import React, { useState } from 'react';
 import styles from './App.module.css';
+
 import  BusinessList from '../components/BusinessList/BusinessList'
 import SearchBar from '../components/SearchBar/SearchBar';
+import search from '../utils/yelpRequests';
 
 
 const App = () => {
 
-  const businessesList = [{
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-}, {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-}, {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-}];
+  const [businessesList, setBusinessesList] = useState([]);
+
+  const searchYelp = async(term, location, sortBy) => {
+    try{
+      const results = await search(term, location, sortBy);
+      setBusinessesList(results);
+    }
+    catch(error){
+      console.log('Error fetching data from Yelp API', error)
+    }
+  }
 
   return (
     <>
       <div className={styles.App}>
       <h1>RAVENOUS</h1>
-      <SearchBar />
+      <SearchBar searchYelp={searchYelp} />
       <BusinessList businessesList={businessesList} />
-      console.log(search());
       </div>
     </>
   )

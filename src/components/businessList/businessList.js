@@ -7,8 +7,8 @@ import styles from './BusinessList.module.css';
 function BusinessList({businessesList}) {
     return (
         <div className={styles.BusinessList}>
-            {businessesList.map((business, index) => (
-                <Business key={index} business={business} />
+            {businessesList.map((business) => (
+                <Business key={business.id} business={business} />
             ))}
         </div>
     );
