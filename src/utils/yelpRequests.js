@@ -1,7 +1,7 @@
 
 const search = async(term, location, sortBy) => {
     try{
-    const apiKey = 'bPGzY9KqB5vPNB-Ts3aV_ViS7De4tRgEYDV-RfN-L9NV0HLPsG82BQRXiK_uKihh9w3P_XHcdfja19i7PGIlQcIYNJATFoAnfZlCRo7rZIEtfYIlOeb76t53H0w2ZnYx';
+    const apiKey = 'Your apikey';
     const url = 'https://api.yelp.com/v3/businesses/';
     const searchParams = `search?term=${term}&location=${location}&sort_by=${sortBy}`;
     const endpoint = `${url}${searchParams}`;
