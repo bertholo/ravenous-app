@@ -4,9 +4,6 @@ import styles from './App.module.css';
 import  BusinessList from '../components/BusinessList/BusinessList'
 import SearchBar from '../components/SearchBar/SearchBar';
 import search from '../utils/yelpRequests';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const App = () => {
 
