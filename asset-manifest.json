@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ravenous-app/static/css/main.5e658bc2.css",
+    "main.js": "/ravenous-app/static/js/main.1c1395ce.js",
+    "static/media/foodVideo.mp4": "/ravenous-app/static/media/foodVideo.5ca31f51fa784772bc8d.mp4",
+    "index.html": "/ravenous-app/index.html",
+    "main.5e658bc2.css.map": "/ravenous-app/static/css/main.5e658bc2.css.map",
+    "main.1c1395ce.js.map": "/ravenous-app/static/js/main.1c1395ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e658bc2.css",
+    "static/js/main.1c1395ce.js"
+  ]
+}
