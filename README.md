@@ -3,6 +3,10 @@
 Ravenous is my first React application built on HTML, Javascript and css.  
 It is basically a restaurant recomendation website that allows users to search for local businesses based on their location and keywords.
 
+## DEMO
+
+https://bertholo.github.io/ravenous-app/
+
 ## Purpose:
 
 As it is my first website project, it will serve as a starting point so I can get more familiar with the tecnologies involved and building projects with clean code.
